@@ -1,0 +1,167 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="header.css">
+    <style>
+        .contact-us {
+            padding: 7rem 0;
+        }
+
+        .contact-us .container {
+            background-color: #ffffff;
+            padding: 32px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-us h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-us p {
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-us form {
+            display: grid;
+            gap: 16px;
+        }
+
+        .contact-us label {
+            font-size: 16px;
+            color: #4a5568;
+        }
+
+        .contact-us input[type="text"],
+        .contact-us input[type="tel"],
+        .contact-us select,
+        .contact-us textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #4a5568;
+        }
+
+        .contact-us input[type="checkbox"],
+        .contact-us input[type="radio"] {
+            margin-right: 8px;
+        }
+
+        .contact-us button {
+            background-color: #3b82f6;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .contact-us button:hover {
+            background-color: #2563eb;
+        }
+
+        .contact-us .text-center {
+            text-align: center;
+        }
+
+        .space-y-2 {
+            margin-bottom: 16px;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            const name = document.getElementById('name').value;
+            const mobile = document.getElementById('mobile').value;
+            const mobilePattern = /^[0-9]{10}$/;
+
+            if (name.trim() === "") {
+                alert("Please enter your name.");
+                return false;
+            }
+
+            if (!mobilePattern.test(mobile)) {
+                alert("Please enter a valid 10-digit mobile number.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="active" href="index.html">HOME</a>
+            <a href="temples.html">TEMPLES</a>
+            <a href="query.html">QUERY</a>
+            <a href="about.html">ABOUT ME</a>
+            <a href="contact.html">CONTACT US</a>
+        </nav>
+    </header>
+    <section class="contact-us">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>
+                We’d love to hear from you! Please fill out the form.
+            </p>
+            <form action="#" method="POST" onsubmit="return validateForm()">
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div>
+                    <label for="mobile">Mobile Number</label>
+                    <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required maxlength="10" pattern="[0-9]{10}">
+                </div>
+                <div>
+                    <label>How did you hear about us?</label>
+                    <div class="space-y-2">
+                        <label>
+                            <input type="radio" name="source" value="Social Media" required> Social Media
+                        </label>
+                        <label>
+                            <input type="radio" name="source" value="Search Engine"> Search Engine
+                        </label>
+                        <label>
+                            <input type="radio" name="source" value="Word of Mouth"> Word of Mouth
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="subscribe" value="yes"> I would like to receive updates and offers.
+                    </label>
+                </div>
+                <div>
+                    <label for="destination">Which destination are you interested in?</label>
+                    <select id="destination" name="destination" required>
+                        <option value="Vrindavan">Vrindavan</option>
+                        <option value="Agra">Agra</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Jaipur">Jaipur</option>
+                        <option value="Mathura">Mathura</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
+

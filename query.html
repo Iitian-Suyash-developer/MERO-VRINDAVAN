@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MERO VRINDAVAN</title>
+    <link rel="stylesheet" href="header.css">
+</head>
+<style>
+    
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem;}
+        .form-container {
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 0.5rem;
+            padding: 2rem;
+            max-width: 32rem;
+            margin: 0 auto;
+            margin-top: 10%;}
+        .title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: center;}
+        .form-group {
+            margin-bottom: 1rem;}
+        .label {
+            font-weight: 500;
+            color: #4a5568;
+            margin-bottom: 0.5rem;
+            display: block;}
+        .input,
+        .textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.375rem;
+            font-size: 1rem;
+            color: #2d3748;}
+        .textarea {
+            resize: vertical; }
+        .input:focus,
+        .textarea:focus {
+            outline: none;
+            border-color: #3182ce;
+          box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.5);}
+        .submit-btn-container {
+            text-align: center;}
+        .submit-btn {
+            background-color: #3182ce;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s ease;}
+        .submit-btn:hover {
+            background-color: #2b6cb0;}
+        .submit-btn:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.5);}
+</style>
+<body>
+    <header><nav>
+            <a class="active" href="index.html">HOME</a>
+            <a href="temples.html">TEMPLES</a>
+            <a href="query.html">QUERY</a>
+            <a href="about.html">ABOUT ME</a>
+            <a href="contact.html">CONTACT US</a></nav>
+    </header>
+    <div class="container">
+        <div class="form-container">
+            <h1 class="title">Submit Your Query</h1>
+            <form action="#" method="POST">
+              <div class="form-group">
+                    <label for="name" class="label">Name</label>
+                    <input type="text" id="name" name="name" class="input" required></div>
+                <div class="form-group">
+                    <label for="email" class="label">Email</label>
+                    <input type="email" id="email" name="email" class="input" required></div>
+                <div class="form-group">
+                    <label for="subject" class="label">Subject</label>
+                    <input type="text" id="subject" name="subject" class="input" required></div>
+                <div class="form-group">
+                    <label for="message" class="label">Message</label>
+                    <textarea id="message" name="message" rows="5" class="textarea" required></textarea></div>
+                <div class="form-group">
+                    <label for="attachment" class="label">Attachment</label>
+                    <input type="file" id="attachment" name="attachment" class="input"></div>
+                <div class="submit-btn-container">
+                    <button type="submit" class="submit-btn">Submit</button></div></form></div></div>
+
+</body>
+</html>
